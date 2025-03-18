@@ -78,7 +78,7 @@ const OrderManagement: React.FC = () => {
     await deleteDoc(doc(db, "orders", id));
     getOrders();
   };
-  const editOrder = (params) => {
+  const editOrder = (params: Order) => {
     setModalVisible(true);
     setCurrent(params.id);
     reset(params);
